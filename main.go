@@ -30,7 +30,7 @@ func main() {
 	if age >= 13 {
 		fmt.Printf("You are old enough to play, %v. Best of luck.\n", name)
 	} else {
-		fmt.Println("You cannot play, you are too young. ")
+		fmt.Println("You cannot play, you are too young. 13+")
 		return
 	}
 	fmt.Printf("Who makes the RX6700?: \n1. Nvidia \n2. AMD\n")
@@ -39,24 +39,24 @@ func main() {
 	var score int8 = 0
 
 	if answer == 2 {
-		fmt.Printf("Correct!\n")
+
 		score = score + 1
 	} else {
-		fmt.Printf("wrong, good luck next time!\n")
+
 		score = score - 1
 	}
 
 	fmt.Printf("How much RAM is recommended for gaming?: \n1. 8 \n2. 16 \n3. 12\n4. 24\n")
 	fmt.Scan(&answer)
 
-	if answer == 16 {
-		fmt.Printf("Correct!\n")
+	if answer == 2 {
+
 		score = score + 1
-	} else if answer == 24 {
-		fmt.Printf("Correct!\n")
+	} else if answer == 4 {
+
 		score = score + 1
 	} else {
-		fmt.Printf("wrong, good luck next time!\n")
+
 		score = score - 1
 	}
 
@@ -64,10 +64,10 @@ func main() {
 	fmt.Scan(&answer)
 
 	if answer == 1 {
-		fmt.Printf("Correct!\n")
+
 		score = score + 1
 	} else {
-		fmt.Printf("wrong, good luck next time!\n")
+
 		score = score - 1
 	}
 
@@ -75,10 +75,10 @@ func main() {
 	fmt.Scan(&answer)
 
 	if answer == 4 {
-		fmt.Printf("Correct!\n")
+
 		score = score + 1
 	} else {
-		fmt.Printf("wrong, good luck next time!\n")
+
 		score = score - 1
 	}
 
@@ -92,8 +92,10 @@ func main() {
 	}
 	if score >= 3 {
 		fmt.Println("Thanks for playing!")
+		fmt.Printf("You score was %v/5, congrats on passings!", score)
 	} else if score < 3 {
 		fmt.Println("You have failed, better luck next time!")
+		fmt.Printf("You score was %v/5, you needed 3/5 to pass!", score)
 	}
 
 }
